@@ -1,0 +1,220 @@
+.destination {
+    background-image: url(../public/images/destination/background-destination-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    overflow: scroll;
+}
+
+.container {
+    margin: 4rem 3rem;
+}
+
+.header {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 4.72px;
+    text-transform: uppercase;
+}
+
+.header > span {
+    font-weight: 400;
+    padding-left: 2rem;
+    letter-spacing: 4.72px;
+}
+
+.tabsContainer {
+    position: relative;
+    clear: left;
+}
+
+.radioTab {
+    display: none;
+}
+
+.tab {
+    float: right;
+}
+
+.label {
+    margin-right: 3rem;
+    position: relative;
+    font-family: "Barlow Condensed", sans-serif;
+    cursor: pointer;
+    color: #d0d6f9;
+    letter-spacing: 2.7px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+
+.label:hover,
+.radioTab:focus + label {
+    color: #fff;
+}
+
+.radioTab:focus + .label::after,
+.radioTab:checked + .label::after {
+    border-bottom: 4px solid #fff;
+}
+
+.radioTab:checked + .label {
+    border-bottom: 4px solid #fff;
+    z-index: 2;
+}
+
+.contentContainer {
+    position: absolute;
+    top: 13vh;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    opacity: 0;
+    margin-top: -6rem;
+}
+
+.radioTab:checked ~ .label ~ .contentContainer {
+    opacity: 1;
+}
+
+.content {
+    margin-right: 8rem;
+}
+
+.content > h1 {
+    font-size: 6.25rem;
+    font-weight: 400;
+    font-family: "Bellefair", sans-serif;
+    text-transform: uppercase;
+}
+
+.content > p {
+    font-size: 1.125rem;
+    font-family: "Barlow", sans-serif;
+    line-height: 2rem;
+    margin-top: -2rem;
+    color: #d0d6f9;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #979797;
+}
+
+.content > h3 {
+    font-family: "Balow Condensed", sans-serif;
+    font-size: 0.825rem;
+    letter-spacing: 2.36px;
+    font-weight: 400;
+    color: #d0d6f9;
+    text-transform: uppercase;
+    margin-top: 3rem;
+}
+
+.content > h2 {
+    font-family: "Bellefair", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.content > h3:last-of-type,
+.content > h2:last-of-type {
+    float: right;
+}
+
+.content > h3:last-of-type {
+    width: 50%;
+    margin-top: -6rem;
+}
+
+.content > h2:last-of-type {
+    width: 50%;
+    margin-top: -3.5rem;
+}
+
+/* tablet */
+
+@media screen and (max-width: 770px) {
+    .home {
+        background-image: url(../public/images/destination/background-destination-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+    }
+    .header {
+        font-size: 1.25rem;
+    }
+    .contentContainer {
+        display: flex;
+        flex-direction: column;
+        margin-top: -5rem;
+    }
+    .label {
+        font-size: 1rem;
+        top: 45vh;
+        z-index: 10;
+        margin-right: 1rem;
+    }
+    .content {
+        display: grid;
+        place-items: center;
+        margin-right: 0;
+    }
+    .content > h1 {
+        font-size: 5rem;
+        padding-top: 2rem;
+    }
+    .content > p {
+        font-size: 1rem;
+    }
+    .content > h2 {
+        font-size: 1.75rem;
+        width: 80%;
+    }
+    .content > h3 {
+        font-size: 0.875rem;
+        width: 80%;
+    }
+    .content > h3:last-of-type {
+        margin-top: -12rem;
+        margin-left: 75%;
+    }
+    .content > h2:last-of-type {
+        margin-left: 75%;
+    }
+    
+}
+
+/* mobile */
+
+@media screen and (max-width: 375px) {
+    .home {
+        background-image: url(../public/images/destination/background-destination-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+    }
+    .content > h2,
+    .content > h3 {
+        width: 55%;
+        clear: both;
+        margin-top: 0;
+    }
+    .content > h3:first-of-type {
+        margin-top: 2rem;
+    }
+    .content > h2:last-of-type {
+        margin-left: 0;
+        margin-top: 0;
+        width: 55%;
+    }
+    .content > h3:last-of-type {
+        margin-left: 0;
+        margin-top: 2rem;
+        width: 55%;
+    }
+}

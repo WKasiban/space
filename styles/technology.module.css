@@ -1,0 +1,170 @@
+.technology {
+    background-image: url(../public/images/technology/background-technology-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    overflow: scroll;
+}
+
+.header {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 4.72px;
+    text-transform: uppercase;
+    margin: 5rem;
+}
+
+.header > span {
+    font-weight: 400;
+    padding-left: 2rem;
+    letter-spacing: 4.72px;
+}
+
+.content {
+    margin-left: 6rem;
+}
+
+.content > h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    font-family: "Bellefair", sans-serif;
+    text-transform: uppercase;
+}
+
+.content > p {
+    font-size: 1.125rem;
+    font-family: "Barlow", sans-serif;
+    line-height: 2rem;
+    margin-top: 2rem;
+    color: #d0d6f9;
+    padding-bottom: 4rem;
+    margin-right: 2rem;
+}
+
+.content > h2 {
+    font-family: "Bellefair", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.contentContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    opacity: 0;
+    right: 0;
+}
+
+.radioTab {
+    display: none;
+}
+
+.tab .label {
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 1rem 1rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #fff;
+    left: 2%;
+    z-index: 10;
+}
+
+.tab {
+    padding-left: 0;
+}
+
+.radioTab:checked + .label {
+    color: #0b0d17;
+    background-color: #fff;
+}
+
+.tabsContainer {
+    position: relative;
+    margin-top: 10vh;
+}
+
+.radioTab:checked ~ .label ~ .contentContainer{
+    opacity: 1;
+}
+
+
+/* tablet */
+
+@media screen and (max-width: 770px) {
+    .home {
+        background-image: url(../public/images/technology/background-technology-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+    }
+    .header {
+        font-size: 1.25rem;
+        margin-left: 2rem;
+    }
+    .contentContainer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .content {
+        margin-top: 5rem;
+    }
+    .content > h2 {
+        font-size: 1.5rem;
+        display: grid;
+        place-items: center;
+        width: 80%;
+    }
+    .content > h1 {
+        font-size: 2.5rem;
+        display: grid;
+        place-items: center;
+        width: 80%;
+    }
+    .content > p {
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 80%;
+        margin-right: 0;
+    }
+   .tabsContainer {
+       margin-top: 0;
+   }
+   .tab .label {
+       top: 240vh;
+       font-size: 0.8rem;
+   }
+   
+}
+
+/* mobile */
+
+@media screen and (max-width: 375px) {
+    .home {
+        background-image: url(../public/images/technology/background-technology-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+    }
+    .tab .label {
+        top: 180vh;
+    }
+    
+}
+
+
+
+
