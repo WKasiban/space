@@ -7,6 +7,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Design
 The web site has been design by [frontmentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3)
 
+## Demo
+https://space-xi-beryl.vercel.app/
+
 ## Screenshot
 ![home page](https://github.com/WKasiban/space/blob/master/public/screenshot/screencapture-home-desktop.png)
 ![destination page](https://github.com/WKasiban/space/blob/master/public/screenshot/screencapture-destination-desktop.png)
